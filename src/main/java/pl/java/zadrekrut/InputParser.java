@@ -10,7 +10,7 @@ public class InputParser {
         return fileContent.subList(0, fileContent.size() - 1).stream()
                 .map(e -> e.split(" "))
                 .peek(InputParser::checkFormat)
-                .map(e -> new Instruction(e[0], BigDecimal.valueOf(Long.parseLong(e[1]))))
+                .map(e -> new Instruction(e[0], new BigDecimal(e[1])))
                 .collect(Collectors.toList());
     }
 
