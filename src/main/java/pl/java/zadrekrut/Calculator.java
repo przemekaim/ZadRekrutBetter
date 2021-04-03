@@ -26,7 +26,7 @@ public class Calculator {
         BigDecimal result = initValue;
 
         for (Instruction instruction : instructions) {
-            if (instruction.getValue().equals(BigDecimal.ONE) && instruction.getInstruction().equals("divide")) {
+            if (instruction.getValue().equals(BigDecimal.ZERO) && instruction.getInstruction().equals("divide")) {
                 throw new ArithmeticException("Cant divide by zero");
             }
 
