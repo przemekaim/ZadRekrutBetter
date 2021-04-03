@@ -9,7 +9,6 @@ import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-
         List<String> fileContent = Reader.readFile();
         Calculator calculator = InputParser.getApplyCommand(fileContent);
         List<Instruction> instructions = InputParser.parseLines(fileContent);
